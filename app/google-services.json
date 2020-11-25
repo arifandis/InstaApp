@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "433817383018",
+    "firebase_url": "https://instaapp-16893.firebaseio.com",
+    "project_id": "instaapp-16893",
+    "storage_bucket": "instaapp-16893.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433817383018:android:bd1081b1caf2a9b066da13",
+        "android_client_info": {
+          "package_name": "com.cahstudio.instaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433817383018-v3ff6dbj9r4p14ho3v8ssgj8ec798fjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8ngYwxuhuLbrAHoR81tEkfDXlo7DnigQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433817383018-v3ff6dbj9r4p14ho3v8ssgj8ec798fjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
