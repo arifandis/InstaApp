@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_login)
 
         initialize()
+        checkUserLoggedIn()
     }
 
     fun initialize(){
@@ -35,8 +36,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         login_btnLoginUser.setOnClickListener(this)
         login_tvRegister.setOnClickListener(this)
-
-        checkUserLoggedIn()
     }
 
     fun checkForm(){
@@ -57,6 +56,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 login_btnLoginUser.text = "Masuk"
                 login_progressbar.visibility = View.GONE
                 Toast.makeText(this, "Login gagal, email atau password salah", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -68,6 +69,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mAuth.addAuthStateListener(mAuthStateListener)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mAuth.removeAuthStateListener(mAuthStateListener)
     }
 
     override fun onClick(v: View?) {
